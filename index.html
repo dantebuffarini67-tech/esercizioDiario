@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario di Lettura della Classe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dist/main.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Diario di Lettura della classe</h1>
+
+    <h2>Inserisci un libro</h2>
+
+    <label for="titolo">Titolo:</label>
+    <input type="text" id="titolo">
+
+    <br><br>
+
+    <label for="autore">Autore:</label>
+    <input type="text" id="autore">
+
+    <br><br>
+
+    <label for="genere">Genere:</label>
+    <select id="genere">
+        <option value="">Scegli il genere</option>
+        <option value="avventura">Avventura</option>
+        <option value="giallo">Giallo</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="storico">Storico</option>
+    </select>
+
+    <br><br>
+
+    <p>Formato:</p>
+
+    <input type="radio" id="cartaceo" name="formato" value="C">
+    <label for="cartaceo">Cartaceo</label>
+
+    <input type="radio" id="ebook" name="formato" value="EB">
+    <label for="ebook">Ebook</label>
+
+    <br><br>
+
+    <label for="stelle">Voto da 1 a 5 stelle:</label>
+    <input type="number" id="stelle" min="1" max="5">
+
+    <br><br>
+
+    <input type="checkbox" id="consigliato">
+    <label for="consigliato">Lo consiglio ai compagni</label>
+
+    <br><br>
+
+    <button onclick="registra()">Registra</button>
+
+    <p id="messaggio"></p>
+
+    <hr>
+
+    <h2>Immagine del genere</h2>
+    <img id="immagine" src="" alt="Immagine del genere" width="150">
+
+    <hr>
+
+    <h2>Elenco dei libri</h2>
+    <ul id="elenco"></ul>
+
+    <hr>
+
+    <h2>Conteggio dei libri per genere</h2>
+
+    <table border="1">
+        <tr>
+            <th>Genere</th>
+            <th>Numero di libri</th>
+        </tr>
+
+        <tr>
+            <td>Avventura</td>
+            <td id="conta-avventura">0</td>
+        </tr>
+
+        <tr>
+            <td>Giallo</td>
+            <td id="conta-giallo">0</td>
+        </tr>
+
+        <tr>
+            <td>Fantasy</td>
+            <td id="conta-fantasy">0</td>
+        </tr>
+
+        <tr>
+            <td>Storico</td>
+            <td id="conta-storico">0</td>
+        </tr>
+    </table>
+
+    <h2>Media delle stelle</h2>
+    <p id="media">Nessun libro registrato.</p>
+
+    <h2>Libro preferito della classe</h2>
+    <p id="preferito">Nessun libro registrato.</p>
+
+</body>
+</html>
